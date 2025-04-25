@@ -1,0 +1,31 @@
+// 8) Carga de Notas
+void cargaNotas() {
+    int cantidadNotas, i;
+    float *notas, suma = 0, promedio;
+
+    printf("Ingrese la cantidad de notas que ingresará: ");
+    scanf("%d", &cantidadNotas);
+
+    if (cantidadNotas <= 0) {
+        printf("La cantidad de notas debe ser mayor que cero.\n");
+        return;
+    }
+
+    notas = (float *)malloc(cantidadNotas * sizeof(float));
+    if (notas == NULL) {
+        printf("Error al asignar memoria.\n");
+        return;
+    }
+
+    printf("Ingrese las %d notas:\n", cantidadNotas);
+    for (i = 0; i < cantidadNotas; i++) {
+        printf("Nota %d: ", i + 1);
+        scanf("%f", &notas[i]);
+        suma += notas[i];
+    }
+
+    promedio = suma / cantidadNotas;
+    printf("El promedio de las notas es: %.2f\n", promedio);
+
+    free(notas);
+}
