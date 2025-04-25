@@ -1,0 +1,15 @@
+// 16) Edad y categoría
+void edadCategoria() {
+    int edad;
+
+    printf("Ingrese la edad de la persona: ");
+    scanf("%d", &edad);
+
+    if (edad < 18) {
+        printf("Categoría: Menor de edad\n");
+    } else if (edad >= 18 && edad <= 64) {
+        printf("Categoría: Adulto\n");
+    } else {
+        printf("Categoría: Adulto mayor\n");
+    }
+}
