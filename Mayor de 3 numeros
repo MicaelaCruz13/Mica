@@ -1,0 +1,31 @@
+// 15) Mayor de tres números
+void mayorDeTres() {
+    int num1, num2, num3;
+
+    printf("Ingrese el primer número: ");
+    scanf("%d", &num1);
+    printf("Ingrese el segundo número: ");
+    scanf("%d", &num2);
+    printf("Ingrese el tercer número: ");
+    scanf("%d", &num3);
+
+    if (num1 >= num2 && num1 >= num3) {
+        printf("El mayor es: %d", num1);
+        if (num1 == num2 && num1 == num3) {
+            printf(" (Los tres números son iguales).\n");
+        } else if (num1 == num2 || num1 == num3) {
+            printf(" (Hay otro número igual al mayor).\n");
+        } else {
+            printf(".\n");
+        }
+    } else if (num2 >= num1 && num2 >= num3) {
+        printf("El mayor es: %d", num2);
+        if (num2 == num3) {
+            printf(" (Hay otro número igual al mayor).\n");
+        } else {
+            printf(".\n");
+        }
+    } else {
+        printf("El mayor es: %d.\n", num3);
+    }
+}
