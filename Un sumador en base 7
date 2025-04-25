@@ -1,0 +1,20 @@
+// 19) Un sumador en base 7
+void sumadorBase7() {
+    int num1, num2, suma;
+
+    printf("Ingrese el primer número de una cifra en base 7 (0-6): ");
+    scanf("%d", &num1);
+    printf("Ingrese el segundo número de una cifra en base 7 (0-6): ");
+    scanf("%d", &num2);
+
+    if ((num1 >= 0 && num1 <= 6) && (num2 >= 0 && num2 <= 6)) {
+        suma = num1 + num2;
+        if (suma < 7) {
+            printf("La suma en base 7 es: %d\n", suma);
+        } else {
+            printf("La suma en base 7 es: 1%d\n", suma - 7); // Representación simple para suma de dos dígitos
+        }
+    } else {
+        printf("Error: Los números deben estar entre 0 y 6.\n");
+    }
+}
