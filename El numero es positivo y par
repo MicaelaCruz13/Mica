@@ -1,0 +1,26 @@
+// 14) El número es positivo y par (Interpretación: Calificación de notas)
+void calificacionNotas() {
+    int nota;
+
+    printf("Ingrese una nota (0-100) (-1 para finalizar): ");
+    scanf("%d", &nota);
+
+    while (nota != -1) {
+        if (nota >= 90 && nota <= 100) {
+            printf("Calificación: Sobresaliente\n");
+        } else if (nota >= 80 && nota <= 89) {
+            printf("Calificación: Muy Bueno\n");
+        } else if (nota >= 70 && nota <= 79) {
+            printf("Calificación: Bueno\n");
+        } else if (nota >= 60 && nota <= 69) {
+            printf("Calificación: Aprobado\n");
+        } else if (nota >= 0 && nota < 60) {
+            printf("Calificación: Reprobado\n");
+        } else {
+            printf("Nota inválida. Debe estar entre 0 y 100.\n");
+        }
+        printf("Ingrese otra nota (0-100) (-1 para finalizar): ");
+        scanf("%d", &nota);
+    }
+    printf("Fin de la carga de notas.\n");
+}
