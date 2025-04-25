@@ -1,0 +1,12 @@
+/ 2) Suma de números enteros
+void sumaEnteros() {
+    int num1, num2, suma;
+
+    printf("Ingrese el primer número entero: ");
+    scanf("%d", &num1);
+    printf("Ingrese el segundo número entero: ");
+    scanf("%d", &num2);
+
+    suma = num1 + num2;
+    printf("La suma es: %d\n", suma);
+}
