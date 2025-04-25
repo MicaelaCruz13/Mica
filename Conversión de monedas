@@ -1,0 +1,35 @@
+//  Conversión de moneda
+void conversionMoneda() {
+    int opcion;
+    float cantidad, resultado;
+    const float DOLAR_A_EURO = 0.92;
+    const float DOLAR_A_PESO = 980.50; // Tasa de cambio aproximada
+    const float EURO_A_DOLAR = 1.09;
+
+    printf("Seleccione la conversión:\n");
+    printf("1. Dólares a Euros\n");
+    printf("2. Dólares a Pesos\n");
+    printf("3. Euros a Dólares\n");
+    printf("Ingrese su opción: ");
+    scanf("%d", &opcion);
+
+    printf("Ingrese la cantidad a convertir: ");
+    scanf("%f", &cantidad);
+
+    switch (opcion) {
+        case 1:
+            resultado = cantidad * DOLAR_A_EURO;
+            printf("%.2f dólares son %.2f euros.\n", cantidad, resultado);
+            break;
+        case 2:
+            resultado = cantidad * DOLAR_A_PESO;
+            printf("%.2f dólares son %.2f pesos.\n", cantidad, resultado);
+            break;
+        case 3:
+            resultado = cantidad * EURO_A_DOLAR;
+            printf("%.2f euros son %.2f dólares.\n", cantidad, resultado);
+            break;
+        default:
+            printf("Opción inválida.\n");
+    }
+}
