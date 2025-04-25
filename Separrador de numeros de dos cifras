@@ -1,0 +1,15 @@
+// 20) Separador de números de 2 cifras
+void separadorDosCifras() {
+    int numero, decena, unidad;
+
+    printf("Ingrese un número de 2 cifras: ");
+    scanf("%d", &numero);
+
+    if (numero >= 10 && numero <= 99) {
+        decena = numero / 10;
+        unidad = numero % 10;
+        printf("%d y %d\n", decena, unidad);
+    } else {
+        printf("Error: El número debe tener 2 cifras.\n");
+    }
+}
